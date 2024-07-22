@@ -13,7 +13,7 @@ bot = telebot.TeleBot(bot_token)
 
 allowed_group_id = -4104757356
 
-allowed_users = [5651360746, 5893904488, 7434545806]
+allowed_users = [5651360746, 5893904488, 7434545806, 6693170165]
 processes = []
 ADMIN_ID = 5651360746
 
