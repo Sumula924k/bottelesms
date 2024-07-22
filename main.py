@@ -181,5 +181,9 @@ def echo_all(message):
     if message.chat.type == 'private':
         bot.reply_to(message, 'Không nhắn riêng nha.')
         return
+        
+def handle_unknown_command(message):
+    if message.chat.id == allowed_group_id and message.text.startswith('/'):
+        bot.reply_to(message, 'Lệnh không xác định, hãy dùng lệnh /help để xem danh sách lệnh.')
 
 bot.polling()
