@@ -132,7 +132,7 @@ def lqm_sms(message):
     file_path = os.path.join(os.getcwd(), "sms.py")
     process = subprocess.Popen(["python", file_path, sdt, "120"])
     processes.append(process)
-    bot.reply_to(message, f'✨ Yêu cầu tấn công thành công! ✨\n+ 📞 Số tấn công: [ {sdt} ]\n+ 💼 Gói: PROMAX\n+ 👾 Số luồng : 1 \n+ 🔗 Số API: 57')
+    bot.reply_to(message, f'✨ Yêu cầu tấn công thành công! ✨\n+ 📞 Số tấn công: [ {sdt} ]\n+ 💼 Gói: PROMAX\n+ 👾 Số luồng : 1 \n+ 🔗 Số API: 64')
 
 @bot.message_handler(commands=['how'])
 def how_to(message):
