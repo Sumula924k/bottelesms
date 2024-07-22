@@ -51,11 +51,11 @@ def save_user_to_database(connection, user_id, expiration_time):
 def add_user(message):
     admin_id = message.from_user.id
     if admin_id != ADMIN_ID:
-        bot.reply_to(message, 'BẠN KHÔNG CÓ QUYỀN SỬ DỤNG LỆNH NÀY')
+        bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?')
         return
 
     if len(message.text.split()) == 1:
-        bot.reply_to(message, 'VUI LÒNG NHẬP ID NGƯỜI DÙNG ')
+        bot.reply_to(message, 'Nhập ID người dùng.')
         return
 
     user_id = int(message.text.split()[1])
@@ -65,7 +65,7 @@ def add_user(message):
     save_user_to_database(connection, user_id, expiration_time)
     connection.close()
 
-    bot.reply_to(message, f'NGƯỜI DÙNG CÓ ID {user_id} ĐÃ ĐƯỢC THÊM VÀO DANH SÁCH ĐƯỢC PHÉP SỬ DỤNG LỆNH /sms.')
+    bot.reply_to(message, f'Người dùng có ID: {user_id} đã được cấp quyền sử dụng lệnh /sms.')
 
 
 load_users_from_database()
@@ -113,20 +113,20 @@ load_users_from_database()
 def lqm_sms(message):
     user_id = message.from_user.id
     if user_id not in allowed_users:
-        bot.reply_to(message, text='BẠN KHÔNG CÓ QUYỀN SỬ DỤNG LỆNH NÀY!')
+        bot.reply_to(message, text='Bạn tuổi gì mà dùng lệnh này?')
         return
     if len(message.text.split()) == 1:
-        bot.reply_to(message, 'VUI LÒNG NHẬP SỐ ĐIỆN THOẠI ')
+        bot.reply_to(message, 'Nhập số điện thoại vô.')
         return
 
     sdt = message.text.split()[1]
     if not sdt.isnumeric():
-        bot.reply_to(message, 'SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ !')
+        bot.reply_to(message, 'Số không hợp lệ.')
         return
 
     if sdt in ['113','911','114','115']:
         # Số điện thoại nằm trong danh sách cấm
-        bot.reply_to(message,"ko spam linh tinh nha e")
+        bot.reply_to(message,"Ai cho chú em spam số này??.")
         return
 
     file_path = os.path.join(os.getcwd(), "sms.py")
@@ -159,10 +159,10 @@ Danh sách lệnh:
 def status(message):
     user_id = message.from_user.id
     if user_id != ADMIN_ID:
-        bot.reply_to(message, 'Bạn không có quyền sử dụng lệnh này.')
+        bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?.')
         return
     if user_id not in allowed_users:
-        bot.reply_to(message, text='Bạn không có quyền sử dụng lệnh này!')
+        bot.reply_to(message, text='Bạn tuổi gì mà dùng lệnh này?')
         return
     process_count = len(processes)
     bot.reply_to(message, f'Số quy trình đang chạy: {process_count}.')
@@ -171,10 +171,10 @@ def status(message):
 def restart(message):
     user_id = message.from_user.id
     if user_id != ADMIN_ID:
-        bot.reply_to(message, 'Bạn không có quyền sử dụng lệnh này.')
+        bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?.')
         return
 
-    bot.reply_to(message, 'Bot sẽ được khởi động lại trong giây lát...')
+    bot.reply_to(message, 'Bot đang được restart...')
     time.sleep(2)
     python = sys.executable
     os.execl(python, python, *sys.argv)
@@ -183,7 +183,7 @@ def restart(message):
 def stop(message):
     user_id = message.from_user.id
     if user_id != ADMIN_ID:
-        bot.reply_to(message, 'Bạn không có quyền sử dụng lệnh này.')
+        bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?.')
         return
 
     bot.reply_to(message, 'Bot sẽ dừng lại trong giây lát...')
@@ -192,7 +192,15 @@ def stop(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    bot.reply_to(message, 'Lệnh không hợp lệ. Vui lòng sử dụng lệnh /help để xem danh sách lệnh.')
+    # Kiểm tra nếu tin nhắn đến từ nhóm
+    if message.chat.id == allowed_group_id:
+        return  # Chấp nhận tin nhắn từ nhóm được phép
+    
+    # Kiểm tra nếu tin nhắn đến từ cuộc trò chuyện cá nhân
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Bạn không có quyền sử dụng bot này qua tin nhắn cá nhân. Vui lòng sử dụng nhóm được phép.')
+    else:
+        bot.reply_to(message, 'Lệnh không hợp lệ. Vui lòng sử dụng lệnh /help để xem danh sách lệnh.')
 
 
 bot.polling()
