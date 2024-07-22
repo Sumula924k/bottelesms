@@ -3,12 +3,11 @@ import datetime
 import time
 import os
 import subprocess
-import psutil
 import sqlite3
 import hashlib
-import requests
+import sys
 
-bot_token = '7334655367:AAFvbzlRVBACKzqB7aUx35i5U6SitX5H-7s' 
+bot_token = '7334655367:AAFvbzlRVBACKzqB7aUx35i5U6SitX5H-7s'
 bot = telebot.TeleBot(bot_token)
 
 allowed_group_id = -1002221164686
@@ -28,9 +27,11 @@ cursor.execute('''
     )
 ''')
 connection.commit()
+
 def TimeStamp():
     now = str(datetime.date.today())
     return now
+
 def load_users_from_database():
     cursor.execute('SELECT user_id, expiration_time FROM users')
     rows = cursor.fetchall()
@@ -67,50 +68,14 @@ def add_user(message):
 
     bot.reply_to(message, f'Người dùng có ID: {user_id} đã được cấp quyền sử dụng lệnh /sms.')
 
-
 load_users_from_database()
-
-# @bot.message_handler(commands=['getkey'])
-# def getkey(message):
-#     bot.reply_to(message, text='VUI LÒNG ĐỢI TRONG GIÂY LÁT!')
-
-#     with open('key.txt', 'a') as f:
-#         f.close()
-
-#     username = message.from_user.username
-#     string = f'GL-{username}+{TimeStamp()}'
-#     hash_object = hashlib.md5(string.encode())
-#     key = str(hash_object.hexdigest())
-#     print(key)
-#     url_key = "thanhdeptraivai"
-
-#     text = f'''
-# - KEY {TimeStamp()} LÀ: {url_key} 
-# - KHI LẤY KEY XONG, DÙNG LỆNH /key {{key}} ĐỂ TIẾP TỤC
-#     '''
-#     bot.reply_to(message, text)
-
-# @bot.message_handler(commands=['key'])
-# def key(message):
-#     if len(message.text.split()) == 1:
-#         bot.reply_to(message, 'VUI LÒNG NHẬP KEY.')
-#         return
-
-#     user_id = message.from_user.id
-
-#     key = message.text.split()[1]
-#     username = message.from_user.username
-#     string = f'GL-{username}+{TimeStamp()}'
-#     hash_object = hashlib.md5(string.encode())
-#     expected_key = "thanhdeptraivai"
-#     if key == expected_key:
-#         allowed_users.append(user_id)
-#         bot.reply_to(message, 'KEY HỢP LỆ. BẠN ĐÃ ĐƯỢC PHÉP SỬ DỤNG LỆNH /sms.')
-#     else:
-#         bot.reply_to(message, 'KEY KHÔNG HỢP LỆ.')
 
 @bot.message_handler(commands=['sms'])
 def lqm_sms(message):
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+
     user_id = message.from_user.id
     if user_id not in allowed_users:
         bot.reply_to(message, text='Bạn tuổi gì mà dùng lệnh này?')
@@ -124,9 +89,8 @@ def lqm_sms(message):
         bot.reply_to(message, 'Số không hợp lệ.')
         return
 
-    if sdt in ['113','911','114','115']:
-        # Số điện thoại nằm trong danh sách cấm
-        bot.reply_to(message,"Ai cho chú em spam số này??.")
+    if sdt in ['113', '911', '114', '115']:
+        bot.reply_to(message, "Ai cho chú em spam số này??.")
         return
 
     file_path = os.path.join(os.getcwd(), "sms.py")
@@ -136,6 +100,10 @@ def lqm_sms(message):
 
 @bot.message_handler(commands=['how'])
 def how_to(message):
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+
     how_to_text = '''
 Hướng dẫn sử dụng:
 
@@ -146,6 +114,10 @@ Hướng dẫn sử dụng:
 
 @bot.message_handler(commands=['help'])
 def help(message):
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+
     help_text = '''
 Danh sách lệnh:
 - /sms {số điện thoại}: Spam cháy máy
@@ -157,6 +129,10 @@ Danh sách lệnh:
 
 @bot.message_handler(commands=['status'])
 def status(message):
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+
     user_id = message.from_user.id
     if user_id != ADMIN_ID:
         bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?.')
@@ -169,6 +145,10 @@ def status(message):
 
 @bot.message_handler(commands=['restart'])
 def restart(message):
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+
     user_id = message.from_user.id
     if user_id != ADMIN_ID:
         bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?.')
@@ -181,6 +161,10 @@ def restart(message):
 
 @bot.message_handler(commands=['stop'])
 def stop(message):
+    if message.chat.type == 'private':
+        bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+
     user_id = message.from_user.id
     if user_id != ADMIN_ID:
         bot.reply_to(message, 'Bạn tuổi gì mà dùng lệnh này?.')
@@ -198,5 +182,5 @@ def echo_all(message):
         bot.reply_to(message, 'Không nhắn riêng nha.')
     else:
         bot.reply_to(message, 'gì')
-        
+
 bot.polling()
