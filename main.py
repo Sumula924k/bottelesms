@@ -11,7 +11,7 @@ import requests
 bot_token = '7334655367:AAFvbzlRVBACKzqB7aUx35i5U6SitX5H-7s' 
 bot = telebot.TeleBot(bot_token)
 
-allowed_group_id = -4104757356
+allowed_group_id = -1002221164686
 
 allowed_users = [5651360746, 5893904488, 7434545806, 6693170165]
 processes = []
