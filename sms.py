@@ -1,6 +1,14 @@
 import requests
 import time
 import sys
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+http = urllib3.PoolManager(
+    cert_reqs='CERT_REQUIRED',
+    ca_certs='/path/to/your/certificate-authority-bundle-file'
+)
 
 if len(sys.argv) != 3:
     print("Số lượng tham số không đúng")
