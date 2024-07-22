@@ -12,9 +12,9 @@ bot = telebot.TeleBot(bot_token)
 
 allowed_group_id = -1002221164686
 
-allowed_users = [5651360746, 5893904488, 7434545806, 6693170165]
+allowed_users = [5893904488, 7434545806, 6693170165]
 processes = []
-ADMIN_ID = 5651360746
+ADMIN_ID = []
 
 connection = sqlite3.connect('user_data.db')
 cursor = connection.cursor()
@@ -181,9 +181,5 @@ def echo_all(message):
     if message.chat.type == 'private':
         bot.reply_to(message, 'Không nhắn riêng nha.')
         return
-    if message.text.startswith('/'):
-        bot.reply_to(message, 'Lệnh không hợp lệ, dùng lệnh /help để xem danh sách lệnh.')
-    else:
-        bot.reply_to(message, 'gì')
 
 bot.polling()
