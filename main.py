@@ -180,6 +180,9 @@ def echo_all(message):
         return 
     if message.chat.type == 'private':
         bot.reply_to(message, 'Không nhắn riêng nha.')
+        return
+    if message.text.startswith('/'):
+        bot.reply_to(message, 'Lệnh không hợp lệ, dùng lệnh /help để xem danh sách lệnh.')
     else:
         bot.reply_to(message, 'gì')
 
