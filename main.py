@@ -192,15 +192,11 @@ def stop(message):
 
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
-    # Kiểm tra nếu tin nhắn đến từ nhóm
     if message.chat.id == allowed_group_id:
-        return  # Chấp nhận tin nhắn từ nhóm được phép
-    
-    # Kiểm tra nếu tin nhắn đến từ cuộc trò chuyện cá nhân
+        return 
     if message.chat.type == 'private':
-        bot.reply_to(message, 'Bạn không có quyền sử dụng bot này qua tin nhắn cá nhân. Vui lòng sử dụng nhóm được phép.')
+        bot.reply_to(message, 'Không nhắn riêng nha.')
     else:
-        bot.reply_to(message, 'Lệnh không hợp lệ. Vui lòng sử dụng lệnh /help để xem danh sách lệnh.')
-
-
+        bot.reply_to(message, 'gì')
+        
 bot.polling()
