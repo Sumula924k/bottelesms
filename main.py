@@ -124,7 +124,7 @@ def lqm_sms(message):
         bot.reply_to(message, 'SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ !')
         return
 
-    if sdt in ['113','911','114','115','+84328774559','0328774559']:
+    if sdt in ['113','911','114','115']:
         # Số điện thoại nằm trong danh sách cấm
         bot.reply_to(message,"ko spam linh tinh nha e")
         return
@@ -132,7 +132,7 @@ def lqm_sms(message):
     file_path = os.path.join(os.getcwd(), "sms.py")
     process = subprocess.Popen(["python", file_path, sdt, "120"])
     processes.append(process)
-    bot.reply_to(message, f'🚀 Gửi Yêu Cầu Tấn Công Thành Công 🚀\n+ Số Tấn Công 📱: [ {sdt} ]\n+ Gói 💸: PROMAX\n+ Số luồng 👾: 1 \n+ Số API ⛓️: 33')
+    bot.reply_to(message, f'✨ Yêu cầu tấn công thành công! ✨\n+ 📞 Số tấn công: [ {sdt} ]\n+ 💼 Gói: PROMAX\n+ 👾 Số luồng : 1 \n+ 🔗 Số API: 33')
 
 @bot.message_handler(commands=['how'])
 def how_to(message):
