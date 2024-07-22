@@ -12,9 +12,9 @@ bot = telebot.TeleBot(bot_token)
 
 allowed_group_id = -1002221164686
 
-allowed_users = [5893904488, 7434545806, 6693170165]
+allowed_users = [5651360746, 5893904488, 7434545806, 6693170165]
 processes = []
-ADMIN_ID = []
+ADMIN_ID = [5651360746]
 
 connection = sqlite3.connect('user_data.db')
 cursor = connection.cursor()
