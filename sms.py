@@ -2565,21 +2565,20 @@ def coolmate():
         'box_token': '9dbb29f1bd9e93ef4a5f8468ff0b5618',
         'cart_quantity': '0',
         'active-voucher1': 'true',
-        'affiliate_content': '%7B%22time_stamp%22%3A1721645343%2C%22source%22%3A%22ggads%22%2C%22traffic_id%22%3A%22%22%2C%22traffic_channel%22%3Anull%2C%22utm_medium%22%3A%22pmax%22%2C%22utm_campaign%22%3A%22VN_GG_PMAX_4SEASON%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.coolmate.me%5C%2Fcollection%5C%2Fao-thun-nam%22%2C%22http_referer%22%3A%22https%3A%5C%2F%5C%2Fwww.google.com%5C%2F%22%2C%22remote_addr%22%3A%22103.161.22.165%22%2C%22http_user_agent%22%3A%22Mozilla%5C%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%5C%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%5C%2F126.0.0.0%20Safari%5C%2F537.36%20OPR%5C%2F112.0.0.0%22%2C%22utm_term%22%3A%2219538181565--%22%2C%22utm_content%22%3Anull%2C%22gclid%22%3A%22CjwKCAjwhvi0BhA4EiwAX25ujy3lXW-SzLrWClAwv-fcDMt1jRqtd66LlrUfZ891qpNlFAjPd_jL2xoCrPEQAvD_BwE%22%7D',
-        'g_state': '{"i_p":1721731756061,"i_l":2}',
-        'redirect_url': 'eyJpdiI6IjVIRCtoazd6dWd4aXlGSk0rMzR1WlE9PSIsInZhbHVlIjoiYmNvdXZSWXZJV3NRUUs0Yml1Vk80MXR4b3Z0UndvZTd0WHpZM2MrQlNOY0plWDdaMjhmMFpZeUxRVlRlQ29DOSIsIm1hYyI6IjQxNTI2Yjg0NzZlOTQ0ZWQ0MTYwODMzYjU0NzhmODk2ODE5Y2YxZjAzNDg1MDI1ZjhjYTdjMmY5NWFkNjZjN2IifQ%3D%3D',
-        'XSRF-TOKEN': 'eyJpdiI6IldGZ293cmxOeDR3TGpnaGJvWFdGM2c9PSIsInZhbHVlIjoiOWZPT1d1bWNiWGtzbUh1WEd2K3RBRm5kUit3bFY2bnFNSWpTWHpyZGRQWmtnekJLY2pGQ3d6Nzh1Njd1TmRjNCIsIm1hYyI6IjhkYTIxYmIwOWRjY2ZiMDQwNzEwY2Q3MGYyNGFiNWM0NzY4MzRjMGE0MGVhZTY0MmU1NmQ5YjJkOGY5MDZkOGQifQ%3D%3D',
-        'laravel_session': 'eyJpdiI6ImlZazZDeUI3dldLS0krUWdXcnRhVmc9PSIsInZhbHVlIjoiVUhNWWZuRjgxNXFuY2ZYR0NTRG41RXZ4VEJ3YVk5ZkRMbmZmdkpyYlpFaHBGbndcL0lWcE5VNFVGZFFxellpenciLCJtYWMiOiJiYTE1YTIzMjhmMzVmYzc5MzMxYjQyYzM2MTZiYjc1Mjg4MTE1M2IzMjU2ZTI2NDNiNjhmNGNkY2ViNmU1YjMyIn0%3D',
+        'affiliate_content': '%7B%22time_stamp%22%3A1721799113%2C%22source%22%3A%22ggads%22%2C%22traffic_id%22%3A%22%22%2C%22traffic_channel%22%3Anull%2C%22utm_medium%22%3A%22search%22%2C%22utm_campaign%22%3A%22VN_GG_SEARCH_BRANDKEY%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.coolmate.me%22%2C%22http_referer%22%3A%22https%3A%5C%2F%5C%2Fwww.google.com%5C%2F%22%2C%22remote_addr%22%3A%22103.161.22.162%22%2C%22http_user_agent%22%3A%22Mozilla%5C%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%5C%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%5C%2F126.0.0.0%20Safari%5C%2F537.36%20OPR%5C%2F112.0.0.0%22%2C%22utm_term%22%3A%2221084599217-163380422121-coolmate%22%2C%22utm_content%22%3A%22693188749431%22%2C%22gclid%22%3A%22CjwKCAjwqf20BhBwEiwAt7dtdUAEePAiTCu24BSCR3YUoTJOreWQgR7EkSIRH1jkjyecvBTaOy7z4BoCgO0QAvD_BwE%22%7D',
+        'g_state': '{"i_p":1722403917652,"i_l":3}',
+        'XSRF-TOKEN': 'eyJpdiI6IlwvTVY0K1l0dWJ6VEZsaDl2MGlxeFVnPT0iLCJ2YWx1ZSI6IkxUWmtvXC9JQUFwdXNyODB3NGhBUDBldEhNUkZsTEhQckdiXC9DeDhmUzdOR0FYN1Zyamc2NzNsRTdIVTBodDFHQSIsIm1hYyI6ImExODQ1MTg0OTViZjFiYTlmZDZhYjlkOTIzZDdhZTVkNjkxNDllZjNiYTZmMTUyYzI4Mjc5ZjhhOTU0NmJjMzMifQ%3D%3D',
+        'laravel_session': 'eyJpdiI6IngybG1TTFN6eGM2dzVxczQ4ekdFUEE9PSIsInZhbHVlIjoiWndnZEQyeUlKeHREXC9YXC90WXMwXC9Yd3g1N3JTczcwdUdESFM3d1wvN3dXdVdoZEVyZm1FWVVjSXFwNWJVd3EzZEwiLCJtYWMiOiI2YjQ4ZTY5NTk0MGNmMDM5YTZiOTgzN2QxZTRjMmYyODBiNTk1YjFhN2VjMzVhNGE5MTlkMWUwNWRiMjMyMjE1In0%3D',
     }
 
     headers = {
         'accept': '*/*',
         'accept-language': 'vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7',
         'content-type': 'application/json',
-        # 'cookie': 'device_token=597f946e29e835d88f56392f40ea75c3; box_token=9dbb29f1bd9e93ef4a5f8468ff0b5618; cart_quantity=0; active-voucher1=true; affiliate_content=%7B%22time_stamp%22%3A1721645343%2C%22source%22%3A%22ggads%22%2C%22traffic_id%22%3A%22%22%2C%22traffic_channel%22%3Anull%2C%22utm_medium%22%3A%22pmax%22%2C%22utm_campaign%22%3A%22VN_GG_PMAX_4SEASON%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.coolmate.me%5C%2Fcollection%5C%2Fao-thun-nam%22%2C%22http_referer%22%3A%22https%3A%5C%2F%5C%2Fwww.google.com%5C%2F%22%2C%22remote_addr%22%3A%22103.161.22.165%22%2C%22http_user_agent%22%3A%22Mozilla%5C%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%5C%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%5C%2F126.0.0.0%20Safari%5C%2F537.36%20OPR%5C%2F112.0.0.0%22%2C%22utm_term%22%3A%2219538181565--%22%2C%22utm_content%22%3Anull%2C%22gclid%22%3A%22CjwKCAjwhvi0BhA4EiwAX25ujy3lXW-SzLrWClAwv-fcDMt1jRqtd66LlrUfZ891qpNlFAjPd_jL2xoCrPEQAvD_BwE%22%7D; g_state={"i_p":1721731756061,"i_l":2}; redirect_url=eyJpdiI6IjVIRCtoazd6dWd4aXlGSk0rMzR1WlE9PSIsInZhbHVlIjoiYmNvdXZSWXZJV3NRUUs0Yml1Vk80MXR4b3Z0UndvZTd0WHpZM2MrQlNOY0plWDdaMjhmMFpZeUxRVlRlQ29DOSIsIm1hYyI6IjQxNTI2Yjg0NzZlOTQ0ZWQ0MTYwODMzYjU0NzhmODk2ODE5Y2YxZjAzNDg1MDI1ZjhjYTdjMmY5NWFkNjZjN2IifQ%3D%3D; XSRF-TOKEN=eyJpdiI6IldGZ293cmxOeDR3TGpnaGJvWFdGM2c9PSIsInZhbHVlIjoiOWZPT1d1bWNiWGtzbUh1WEd2K3RBRm5kUit3bFY2bnFNSWpTWHpyZGRQWmtnekJLY2pGQ3d6Nzh1Njd1TmRjNCIsIm1hYyI6IjhkYTIxYmIwOWRjY2ZiMDQwNzEwY2Q3MGYyNGFiNWM0NzY4MzRjMGE0MGVhZTY0MmU1NmQ5YjJkOGY5MDZkOGQifQ%3D%3D; laravel_session=eyJpdiI6ImlZazZDeUI3dldLS0krUWdXcnRhVmc9PSIsInZhbHVlIjoiVUhNWWZuRjgxNXFuY2ZYR0NTRG41RXZ4VEJ3YVk5ZkRMbmZmdkpyYlpFaHBGbndcL0lWcE5VNFVGZFFxellpenciLCJtYWMiOiJiYTE1YTIzMjhmMzVmYzc5MzMxYjQyYzM2MTZiYjc1Mjg4MTE1M2IzMjU2ZTI2NDNiNjhmNGNkY2ViNmU1YjMyIn0%3D',
+        # 'cookie': 'device_token=597f946e29e835d88f56392f40ea75c3; box_token=9dbb29f1bd9e93ef4a5f8468ff0b5618; cart_quantity=0; active-voucher1=true; affiliate_content=%7B%22time_stamp%22%3A1721799113%2C%22source%22%3A%22ggads%22%2C%22traffic_id%22%3A%22%22%2C%22traffic_channel%22%3Anull%2C%22utm_medium%22%3A%22search%22%2C%22utm_campaign%22%3A%22VN_GG_SEARCH_BRANDKEY%22%2C%22url%22%3A%22https%3A%5C%2F%5C%2Fwww.coolmate.me%22%2C%22http_referer%22%3A%22https%3A%5C%2F%5C%2Fwww.google.com%5C%2F%22%2C%22remote_addr%22%3A%22103.161.22.162%22%2C%22http_user_agent%22%3A%22Mozilla%5C%2F5.0%20%28Windows%20NT%2010.0%3B%20Win64%3B%20x64%29%20AppleWebKit%5C%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%5C%2F126.0.0.0%20Safari%5C%2F537.36%20OPR%5C%2F112.0.0.0%22%2C%22utm_term%22%3A%2221084599217-163380422121-coolmate%22%2C%22utm_content%22%3A%22693188749431%22%2C%22gclid%22%3A%22CjwKCAjwqf20BhBwEiwAt7dtdUAEePAiTCu24BSCR3YUoTJOreWQgR7EkSIRH1jkjyecvBTaOy7z4BoCgO0QAvD_BwE%22%7D; g_state={"i_p":1722403917652,"i_l":3}; XSRF-TOKEN=eyJpdiI6IlwvTVY0K1l0dWJ6VEZsaDl2MGlxeFVnPT0iLCJ2YWx1ZSI6IkxUWmtvXC9JQUFwdXNyODB3NGhBUDBldEhNUkZsTEhQckdiXC9DeDhmUzdOR0FYN1Zyamc2NzNsRTdIVTBodDFHQSIsIm1hYyI6ImExODQ1MTg0OTViZjFiYTlmZDZhYjlkOTIzZDdhZTVkNjkxNDllZjNiYTZmMTUyYzI4Mjc5ZjhhOTU0NmJjMzMifQ%3D%3D; laravel_session=eyJpdiI6IngybG1TTFN6eGM2dzVxczQ4ekdFUEE9PSIsInZhbHVlIjoiWndnZEQyeUlKeHREXC9YXC90WXMwXC9Yd3g1N3JTczcwdUdESFM3d1wvN3dXdVdoZEVyZm1FWVVjSXFwNWJVd3EzZEwiLCJtYWMiOiI2YjQ4ZTY5NTk0MGNmMDM5YTZiOTgzN2QxZTRjMmYyODBiNTk1YjFhN2VjMzVhNGE5MTlkMWUwNWRiMjMyMjE1In0%3D',
         'origin': 'https://www.coolmate.me',
         'priority': 'u=1, i',
-        'referer': 'https://www.coolmate.me/account/register',
+        'referer': 'https://www.coolmate.me/?utm_source=ggads&utm_medium=search&utm_campaign=vn_gg_search_brandkey&utm_content=brandkey&utm_source=ggads&utm_medium=search&utm_campaign=VN_GG_SEARCH_BRANDKEY&utm_term=21084599217-163380422121-coolmate&utm_content=693188749431&gad_source=1&gclid=CjwKCAjwqf20BhBwEiwAt7dtdUAEePAiTCu24BSCR3YUoTJOreWQgR7EkSIRH1jkjyecvBTaOy7z4BoCgO0QAvD_BwE',
         'sec-ch-ua': '"Not/A)Brand";v="8", "Chromium";v="126", "Opera";v="112"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Windows"',
@@ -2587,14 +2586,14 @@ def coolmate():
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
         'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 OPR/112.0.0.0',
-        'x-csrf-token': 'GzCw2nVV8RIFiuB3x47ySHEel1qgAVQVytf79QrI',
+        'x-csrf-token': 'pF5HMuGZ6qEQ6EudK1Lyvj8mc5zZmXvzlDQaCJnQ',
     }
 
     json_data = {
-        'fullname': 'tran quoc huuh',
+        'fullname': 'tran quoc ujy',
         'email': 'quadeptrai@gmail.com',
         'phone': sdt,
-        'password': '123123123',
+        'password': '123123aA@',
         'ajax': True,
     }
 
